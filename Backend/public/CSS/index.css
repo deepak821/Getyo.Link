@@ -1,0 +1,36 @@
+*{
+    margin:0%;
+    padding: 0%;
+}
+
+.boxContainer{
+    margin: auto;
+    margin-top: 10%;
+    position: relative;
+    width: 350px;
+    height: 42px;
+    border: 4px solid black;
+    padding: 0px 10px;
+    border-radius: 50px;
+}
+.elementsContainer{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border: none;
+}
+.form{
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+.search{
+    border: none;
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    padding: 0px 5px;
+}
+.search:focus{
+    outline: none;
+}
