@@ -1,0 +1,11 @@
+.cont{
+    margin: auto;
+    margin-top: 2%;
+    position: relative;
+    width: 350px;
+    height: 39px;
+    text-align: center;
+}
+.icon:active{
+    color: black;
+}

@@ -1,18 +1,16 @@
 const mongoose = require('mongoose');
 
-var letters = "0123456789ABCDEF";
-var uid ="";
-for(var i = 0; i < 6; i++)
- uid  = uid + letters[(Math.floor(Math.random() * 16))];
+
 const Schema = mongoose.Schema
 
 const Link = Schema({
-    weblink: {
-        type: String
-    },
-    _id: {
+    url: {
         type: String,
-        default: uid
+        require: true
+    },
+    id: {
+        type: String,
+        unique: true
       },
     description: {
         type: String
