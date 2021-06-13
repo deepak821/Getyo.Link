@@ -46,7 +46,6 @@ check(
             email: req.body.email 
         })
         linkdata.save().then((result) => {
-            console.log(result.id)
             res.status(200).render("AddLink",{UniqueId: result.id})
         }) 
     } catch (error) {
@@ -55,6 +54,13 @@ check(
 }
 })
 
+app.get("/:id",(req, res) => {
+    Links.findOne({id: req.params.id}, (err, result) => {
+       if(err)
+       res.send("no url found!");
+       res.render("LinkShow",{URL: result.url})
+    })
+}) 
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/GetyoLink', {useNewUrlParser: true, useCreateIndex: true,
 useUnifiedTopology: true, useFindAndModify: false});
@@ -63,8 +69,6 @@ const connection = mongoose.connection;
 connection.once("open",()=>{
     console.log("I'm connected");
 });
-const linksroute = require("./routes/links")
-app.use("/links",linksroute) 
     
 app.listen(Port, () => {
     console.log(`you are connected at port: ${Port}`)
