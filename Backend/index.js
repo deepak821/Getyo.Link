@@ -4,7 +4,8 @@ const Links = require("./model/links.model")
 const path = require("path");
 const hbs =require('hbs')
 const app = express();
-const { check, validationResult } = require("express-validator")
+const { check, validationResult } = require("express-validator");
+const { nextTick } = require("process");
 const Port = 8000;    
 app.use(express.json());
 app.use(express.urlencoded({extended:false})); 
@@ -35,7 +36,7 @@ check(
     }
     else{
     try {
-        var letters = "0123456789ABCDEF";
+        var letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         var uid ="";
         for(var i = 0; i < 6; i++)
         uid  = uid + letters[(Math.floor(Math.random() * 16))];
@@ -56,9 +57,22 @@ check(
 
 app.get("/:id",(req, res) => {
     Links.findOne({id: req.params.id}, (err, result) => {
-       if(err)
-       res.send("no url found!");
-       res.render("LinkShow",{URL: result.url})
+       if(err){
+           console.log("entered")
+       return res.send("no url found!");
+       }
+       if(result){
+        if(result.url.slice(0,8)==="https://"){
+            console.log(result.description)
+            return res.render("LinkShow",{URL: result.url.substring(8), about: result.description});
+        }
+        else{
+            return res.render("LinkShow",{URL: result.url, about: result.description});
+        }
+    }
+       else{
+        res.render('LinkShow',{msg: "No URL found!"})
+       }
     })
 }) 
 
