@@ -8,10 +8,10 @@
     margin-top: 10%;
     position: relative;
     width: 350px;
-    height: 42px;
-    border: 4px solid black;
+    height: 60px;
+    border: 2px solid black;
     padding: 0px 10px;
-    border-radius: 50px;
+    border-radius: 5px;
     text-align: center;
 }
 .elementsContainer{
@@ -20,10 +20,15 @@
     vertical-align: middle;
     border: none;
 }
+.container{
+    padding-top: 11rem;
+    padding-bottom: 2rem;
+}
 .form{
     border: none;
     height: 100%;
     width: 100%;
+    font-size: 35px;
 }
 .search{
     border: none;
@@ -34,4 +39,7 @@
 }
 .search:focus{
     outline: none;
+}
+.text{
+    text-align: center;
 }
