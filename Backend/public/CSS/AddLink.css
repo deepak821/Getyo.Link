@@ -1,11 +1,60 @@
 .cont{
     margin: auto;
+    display: flex;
     margin-top: 2%;
     position: relative;
-    width: 350px;
     height: 39px;
     text-align: center;
+}
+.fbox{
+    padding-right: 33px;
 }
 .icon:active{
     color: black;
 }
+/*Navbar responsive*/
+@media only screen and (max-width: 900px) {
+    .md\:pl-4 {
+        padding-left: 1rem;
+    }
+    .md\:py-1 {
+        padding-top: .25rem;
+        padding-bottom: 1.25rem;
+    }
+    .md\:ml-auto {
+        margin-left: auto;
+    }
+  }
+
+@media only screen and (max-width: 425px) {
+    .link{
+        font-size: 1rem;
+    }
+    .logo{
+        font-size: 0rem;
+    }
+  }
+  
+/*form responsive*/
+
+@media only screen and (max-width: 643px) {
+    .form-box{
+        width: 100%;
+    }
+  }
+
+@media only screen and (max-width: 640px) {
+    .cont{
+        flex-direction: column;
+    }
+    .fbox{
+        padding-right: 0px;
+        padding-bottom: 8px;
+    }
+  }  
+
+@media only screen and (max-width: 643px) {
+    .lbox{
+        width: 250px;
+    }
+  }

@@ -47,3 +47,32 @@
     padding-top: 11rem;
     padding-bottom: 2rem;
 }
+
+@media only screen and (max-width: 900px) {
+    .md\:pl-4 {
+        padding-left: 1rem;
+    }
+    .md\:py-1 {
+        padding-top: .25rem;
+        padding-bottom: 1.25rem;
+    }
+    .md\:ml-auto {
+        margin-left: auto;
+    }
+  }
+
+@media only screen and (max-width: 425px) {
+    .link{
+        font-size: 1rem;
+    }
+    .logo{
+        font-size: 0rem;
+    }
+  }
+
+
+@media only screen and (max-width: 425px) {
+    .searchboxcont{
+        width: 100%;
+    }
+  }

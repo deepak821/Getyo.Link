@@ -20,7 +20,7 @@
     vertical-align: middle;
     border: none;
 }
-.container{
+.contain{
     padding-top: 11rem;
     padding-bottom: 2rem;
 }
@@ -43,3 +43,32 @@
 .text{
     text-align: center;
 }
+
+@media only screen and (max-width: 900px) {
+    .md\:pl-4 {
+        padding-left: 1rem;
+    }
+    .md\:py-1 {
+        padding-top: .25rem;
+        padding-bottom: 1.25rem;
+    }
+    .md\:ml-auto {
+        margin-left: auto;
+    }
+  }
+
+@media only screen and (max-width: 425px) {
+    .link{
+        font-size: 1rem;
+    }
+    .logo{
+        font-size: 0rem;
+    }
+  }
+/*search form*/
+  @media only screen and (max-width: 387px) {
+    .boxContainer{
+        width: 272px;
+        height: 55px;
+    }
+  }

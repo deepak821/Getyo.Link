@@ -14,35 +14,10 @@
 </head>
 
 <body> 
-  <header class="text-gray-600 body-font">
-  <div class="cont mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/">
-      <img src="../images/logo.png" class="w-20 h-20 mt-0" alt="">
-      <span class="ml-1 text-3xl"> Getyo.Link</span>
-    </a>
-    <nav class="md:ml-auto md:ml-8 md:py-0 md:pl-4 	flex flex-wrap text-base justify-center">
-      <div class="boxContainer">
-    <form method="GET" class="form" id="form_id" onsubmit="searchid()">
-      <table class="elementsContainer">
-        <tr>
-          <td>
-            <input type="text" id="myinput" placeholder="Search" class="search">
-          </td>
-          <td>
-            <button type="submit" ><i class="fas fa-search"></i></button>
-          </td>
-        </tr>
-      </table>
-    </form>
-    
-  </div>
-    </nav>
-    
-  </div>
-</header>
+  {{>Navbar}}
     <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto">
-    <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center" style="border: 2px solid black;">
+    <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
       {{#if URL}}
         <a href="http://{{URL}}" target="_blank">{{URL}}</a>
         <p>{{about}}</p>
