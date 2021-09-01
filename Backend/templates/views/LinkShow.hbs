@@ -23,7 +23,7 @@
         <input type="text" id='uncode' placeholder="Generated Link" style="font-size: 23px; text-align:center" value="http://{{URL}}"
           readonly="">
          <i class="far fa-copy" onclick="copycode()" style="cursor: pointer;"></i>
-         <a href="http://{{URL}}" target="_blank"><i class="fas fa-link"></i></a>
+         <a href="http://{{URL}}" target="_blank" style="text-decoration: none;"><button style="border: 2px solid black; background-color:black; padding:2px; color:white; font-weight:bold">Open Link</button></a>
         {{else}}
         <p>No URL</p>
         {{/if}}
