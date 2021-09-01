@@ -55,14 +55,14 @@
             </form>
             <div class="cont">
                 <div class="myinput fbox" style="align-items: center;">
-                    <input type="text" id='uncode link' placeholder="Generated Link" style="font-size: 23px;"
-                        value="getyo.link/{{UniqueId}}" readonly="">
-                    <button onclick="copycode()"><i class="far fa-copy"></i></button>
+                    <input type="text" id='uncode' placeholder="Generated Link" style="font-size: 23px;"
+                        value="{{UniqueLink}}" readonly="">
+                    <i class="far fa-copy" onclick="copycode()" style="cursor: pointer;"></i>
                 </div>
                 <div class="myinput lbox" style="align-items: center; justified">
                     <input type="text" id='uncode' placeholder="Generated Code" style="font-size: 23px;"
                         value="{{UniqueId}}" readonly="">
-                    <button onclick="copycode()"><i class="far fa-copy"></i></button>
+                    <i class="far fa-copy" onclick="copycode()" style="cursor: pointer;"></i>
                 </div>
             </div>
             <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
@@ -107,7 +107,7 @@
         function copycode() {
             /* Get the text field */
             var copyText = document.getElementById("uncode");
-
+            
             /* Select the text field */
             copyText.select();
             copyText.setSelectionRange(0, 99999); /* For mobile devices */

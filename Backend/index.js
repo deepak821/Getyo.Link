@@ -47,7 +47,7 @@ check(
             email: req.body.email 
         })
         linkdata.save().then((result) => {
-            res.status(200).render("AddLink",{UniqueId: result.id})
+            res.status(200).render("AddLink",{UniqueId: result.id, UniqueLink: `getyo.link/${result.id}`})
         }) 
     } catch (error) {
         console.log(error)
