@@ -6,7 +6,7 @@ const hbs =require('hbs')
 const app = express();
 const { check, validationResult } = require("express-validator");
 const { nextTick } = require("process");
-const Port = 8000;    
+const Port = process.env.PORT || 8000;    
 app.use(express.json());
 app.use(express.urlencoded({extended:false})); 
 const staticpath = path.join(__dirname, "./public")   
